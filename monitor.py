@@ -9,7 +9,7 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # Dicionário de ativos: "Ticker.SA": Preço_Alvo
 # O alerta dispara se o preço for MENOR ou IGUAL ao alvo
 monitorar = {
-    "XPML11.SA": 115.00,
+    "XPML11.SA": 115.10,
     "HGLG11.SA": 165.00,
     "KNCR11.SA": 102.00,
     "WEGE3.SA": 38.50,
