@@ -10,14 +10,14 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # Formato: "Ticker": [Alvo_Baixa, Alvo_Alta]
 monitorar = {
     "BGI=F": [320.00, 340.00],      # 🐂 Boi Gordo
-    "USDBRL=X": [5.10, 5.80],       # 💵 Dólar Comercial
-    "GOLD11.SA": [14.80, 18.50],    # ✨ Ouro (Ref. Trend Ouro)
+    "USDBRL=X": [5.10, 5.40],       # 💵 Dólar Comercial
+    "GOLD11.SA": [25.80, 30.00],    # ✨ Ouro (Ref. Trend Ouro)
     "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
     "HGLG11.SA": [153.00, 170.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
     "XPLG11.SA": [102.00, 115.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 100.00],   # 🏬 FII BTML11
-    "WEGE3.SA": [50.00, 65.00],     # ⚙️ Weg
+    "WEGE3.SA": [40.00, 65.00],     # ⚙️ Weg
     "ITUB4.SA": [39.00, 48.00]      # 🏦 Itaú
 }
 
