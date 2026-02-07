@@ -10,7 +10,7 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # O alerta dispara se o preço for MENOR ou IGUAL ao alvo
 monitorar = {
    "XPML11.SA": 106.00,
-    "HGLG11.SA": 163.00,
+    "HGLG11.SA": 153.00,
     "KNCR11.SA": 100.00,
     "WEGE3.SA": 50.00,
     "ITUB4.SA": 39.00,
