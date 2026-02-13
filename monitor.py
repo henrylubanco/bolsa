@@ -17,8 +17,9 @@ monitorar = {
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
     "XPLG11.SA": [102.00, 115.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 100.00],   # 🏬 FII BTML11
-    "WEGE3.SA": [40.00, 65.00],     # ⚙️ Weg
-    "ITUB4.SA": [39.00, 48.00]      # 🏦 Itaú
+    "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
+    "ITUB4.SA": [39.00, 50.00]      # 🏦 Itaú
+    "MGLU3.SA": [8.00, 12.00]      # 🏦 magalu
 }
 
 def enviar_alerta(ativo, preco_atual, tipo):
