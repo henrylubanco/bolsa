@@ -15,7 +15,7 @@ monitorar = {
     "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
     "HGLG11.SA": [153.00, 170.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
-    "XPLG11.SA": [102.00, 115.00],  # 🏭 FII XPLG11
+    "XPLG11.SA": [100.50, 105.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 100.00],   # 🏬 FII BTML11
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
     "ITUB4.SA": [39.00, 50.00],      # 🏦 Itaú
