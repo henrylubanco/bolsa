@@ -9,7 +9,7 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # 2. Dicionário Completo de Ativos
 # Formato: "Ticker": [Alvo_Baixa, Alvo_Alta]
 monitorar = {
-    "BGI=F": [320.00, 340.00],      # 🐂 Boi Gordo
+    "BGI=G": [320.00, 350.00],      # 🐂 Boi Gordo
     "USDBRL=X": [5.10, 5.40],       # 💵 Dólar Comercial
     "GOLD11.SA": [25.80, 30.00],    # ✨ Ouro (Ref. Trend Ouro)
     "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
@@ -18,6 +18,7 @@ monitorar = {
     "XPLG11.SA": [100.50, 105.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 100.00],   # 🏬 FII BTML11
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
+    "GGBR4.SA": [21.00, 24.00],      # 🏦 GGBR4
     "ITUB4.SA": [39.00, 50.00],      # 🏦 Itaú
     "MGLU3.SA": [8.00, 12.00]      # 🏦 magalu
 }
