@@ -18,8 +18,11 @@ monitorar = {
     "XPLG11.SA": [100.50, 105.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 100.00],   # 🏬 FII BTML11
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
-    "GGBR4.SA": [21.00, 24.00],      # 🏦 GGBR4
+    "GGBR4.SA": [20.00, 24.00],      # 🏦 GGBR4
     "ITUB4.SA": [39.00, 50.00],      # 🏦 Itaú
+    "TOTS3.SA": [36.00, 39.00],      # 🏦 TOTS
+    "VGIA11.SA": [8.00, 11.00],      # 🏦 F11 AGRO
+    "VISC11.SA": [107.20, 115.00],      # 🏦 F11 tijolo
     "MGLU3.SA": [8.00, 12.00]      # 🏦 magalu
 }
 
