@@ -4,9 +4,11 @@ on:
   schedule:
     # O horário UTC é 3h a mais que Brasília.
     # 13:00 às 21:00 UTC = 10:00 às 18:00 Brasília.
-    # Roda a cada 10 minutos entre 09:00 e 18:00 (Brasília)
+   # Check-in de Status: 08:05 (Brasília) / 11:05 (UTC)
+    - cron: '5 11 * * 1-5'
+    # Monitoramento a cada 10 min: 09:00 às 18:00 (Brasília)
     - cron: '*/10 12-21 * * 1-5'
-    # Gatilho específico para o resumo das 11:05 (Brasília)
+    # Resumo das 11:05 (Brasília) / 14:05 (UTC)
     - cron: '5 14 * * 1-5'
   workflow_dispatch: # Permite que você rode o teste manualmente pelo botão "Run workflow"
 
