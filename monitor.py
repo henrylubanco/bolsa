@@ -8,7 +8,7 @@ import pytz
 TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
-# 2. Dicionário Completo de Ativos [Baixa, Alta]
+# 2. Dicionário de Ativos [Baixa, Alta]
 monitorar = {
     "BGI=G": [320.00, 350.00],      # 🐂 Boi Gordo
     "USDBRL=X": [5.10, 5.40],       # 💵 Dólar Comercial
@@ -35,47 +35,28 @@ def enviar_mensagem(texto):
     except Exception as e:
         print(f"Erro no Telegram: {e}")
 
-def enviar_alerta(ativo, preco_atual, tipo):
-    nomes = {
-        "BGI=G": "🐂 Boi Gordo", "USDBRL=X": "💵 Dólar", "GOLD11.SA": "✨ Ouro",
-        "XPML11.SA": "🏢 FII XPML11", "HGLG11.SA": "📦 FII HGLG11",
-        "KNCR11.SA": "📄 FII KNCR11", "XPLG11.SA": "🏭 FII XPLG11",
-        "WEGE3.SA": "⚙️ Weg", "ITUB4.SA": "🏦 Itaú"
-    }
-    nome = nomes.get(ativo, ativo)
-    emoji = "📉" if tipo == "BAIXA" else "📈"
-    msg = f"{emoji} *ALERTA DE {tipo}*\n\nAtivo: *{nome}*\nPreço: *R$ {preco_atual:.2f}*"
-    enviar_mensagem(msg)
-
-# --- INÍCIO DA EXECUÇÃO ---
-
-# Configura hora de Brasília para o resumo
+# Configura fuso horário de Brasília
 fuso = pytz.timezone('America/Sao_Paulo')
 hora_agora = datetime.now(fuso)
 
-# 1. RESUMO DAS 11H (Envia se for entre 11:00 e 11:15)
-if hora_agora.hour == 11 and hora_agora.minute < 15:
-    print("Enviando resumo das 11h...")
-    try:
-        # Busca preços para o resumo matinal
-        boi_data = yf.Ticker("BGI=G").history(period="1d")
-        usd_data = yf.Ticker("USDBRL=X").history(period="1d")
-        
-        if not boi_data.empty and not usd_data.empty:
-            boi = boi_data['Close'].iloc[-1]
-            usd = usd_data['Close'].iloc[-1]
-            
-            resumo = (
-                f"🕒 *BOLETIM DAS 11:00h*\n\n"
-                f"🐂 *Boi Gordo:* R$ {boi:.2f}\n"
-                f"💵 *Dólar:* R$ {usd:.2f}\n\n"
-                f"O mercado está aberto e o monitoramento de ativos segue ativo."
-            )
-            enviar_mensagem(resumo)
-    except Exception as e:
-        print(f"Erro ao gerar resumo: {e}")
+# --- LOGICA DE HORÁRIOS ---
 
-# 2. MONITORAMENTO DE ALVOS (Roda sempre)
+# 1. CHECK-IN DE STATUS (08:00h)
+if hora_agora.hour == 8 and hora_agora.minute < 15:
+    msg_status = "✅ *SISTEMA ONLINE*\n\nBom dia! O monitor de ativos da Fazenda e Bolsa iniciou com sucesso e está operante."
+    enviar_mensagem(msg_status)
+
+# 2. RESUMO MATINAL (11:00h)
+elif hora_agora.hour == 11 and hora_agora.minute < 15:
+    try:
+        boi = yf.Ticker("BGI=G").history(period="1d")['Close'].iloc[-1]
+        usd = yf.Ticker("USDBRL=X").history(period="1d")['Close'].iloc[-1]
+        resumo = f"🕒 *BOLETIM 11:00h*\n\n🐂 *Boi:* R$ {boi:.2f}\n💵 *Dólar:* R$ {usd:.2f}"
+        enviar_mensagem(resumo)
+    except:
+        pass
+
+# 3. MONITORAMENTO DE ALVOS (Roda em todas as execuções)
 for ticker, alvos in monitorar.items():
     try:
         baixa, alta = alvos[0], alvos[1]
@@ -85,11 +66,8 @@ for ticker, alvos in monitorar.items():
         preco_atual = df['Close'].iloc[-1]
         
         if preco_atual <= baixa:
-            enviar_alerta(ticker, preco_atual, "BAIXA")
+            enviar_mensagem(f"📉 *ALERTA DE BAIXA*\nAtivo: {ticker}\nPreço: *R$ {preco_atual:.2f}*")
         elif preco_atual >= alta:
-            enviar_alerta(ticker, preco_atual, "ALTA")
-            
+            enviar_mensagem(f"📈 *ALERTA DE ALTA*\nAtivo: {ticker}\nPreço: *R$ {preco_atual:.2f}*")
     except Exception as e:
         print(f"Erro em {ticker}: {e}")
-
-print("Monitoramento finalizado.")
