@@ -23,6 +23,7 @@ monitorar = {
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
     "GGBR4.SA": [16.00, 24.00],     # 🏦 Gerdau
     "ITUB4.SA": [39.00, 50.00],     # 🏦 Itaú
+    "BBDC4.SA": [18.40, 20.00],     # 🏦 Bradesco
     "TOTS3.SA": [35.00, 39.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 11.00],     # 🚜 Fiagro
     "VISC11.SA": [107.20, 115.00],  # 🛍️ FII Shopping
