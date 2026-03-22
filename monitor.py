@@ -12,9 +12,10 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # --- CONFIGURAÇÃO DE ATIVOS [ALVO_BAIXA, ALVO_ALTA] ---
 # Estrutura de dicionário para facilitar a iteração e manutenção
 monitorar = {
-    "BGI=G": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro)
+    "BGI=H": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Marco
+    "BGI=J": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Abril
     "USDBRL=X": [5.10, 5.40],       # 💵 Dólar Comercial
-    "GOLD11.SA": [25.80, 30.00],    # ✨ Ouro
+    "GOLD11.SA": [24.00, 26.00],    # ✨ Ouro
     "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
     "HGLG11.SA": [153.00, 170.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
@@ -23,8 +24,8 @@ monitorar = {
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
     "GGBR4.SA": [16.00, 24.00],     # 🏦 Gerdau
     "ITUB4.SA": [39.00, 50.00],     # 🏦 Itaú
-    "BBDC4.SA": [18.40, 20.00],     # 🏦 Bradesco
-    "TOTS3.SA": [35.00, 39.00],     # 💻 Totvs
+    "BBDC4.SA": [16.00, 18.00],     # 🏦 Bradesco
+    "TOTS3.SA": [30.00, 37.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 11.00],     # 🚜 Fiagro
     "VISC11.SA": [107.20, 115.00],  # 🛍️ FII Shopping
     "MGLU3.SA": [8.00, 12.00]       # 🛒 Magalu
