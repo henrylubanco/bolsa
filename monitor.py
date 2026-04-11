@@ -14,7 +14,7 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 monitorar = {
     "BGI=H": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Marco
     "BGI=J": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Abril
-    "USDBRL=X": [5.10, 5.40],       # 💵 Dólar Comercial
+    "USDBRL=X": [5.00, 5.40],       # 💵 Dólar Comercial
     "GOLD11.SA": [24.00, 26.00],    # ✨ Ouro
     "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
     "HGLG11.SA": [153.00, 170.00],  # 📦 FII HGLG11
