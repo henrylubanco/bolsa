@@ -27,6 +27,8 @@ monitorar = {
     "BBDC4.SA": [18.00, 21.00],     # 🏦 Bradesco
     "TOTS3.SA": [30.00, 37.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 11.00],     # 🚜 Fiagro
+    "RZAG11.SA": [8.80, 10.00],     # 🚜 Fiagro
+    "FGAA11.SA": [8.80, 10.00],     # 🚜 Fiagro
     "VISC11.SA": [107.20, 115.00],  # 🛍️ FII Shopping
     "MGLU3.SA": [8.00, 12.00]       # 🛒 Magalu
 }
