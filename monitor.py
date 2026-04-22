@@ -14,17 +14,18 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 monitorar = {
     "BGI=H": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Marco
     "BGI=J": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) Abril
+    "BGI=k": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) MAIO
     "USDBRL=X": [4.95, 5.40],       # 💵 Dólar Comercial
-    "GOLD11.SA": [24.00, 26.00],    # ✨ Ouro
-    "XPML11.SA": [106.00, 120.00],  # 🏢 FII XPML11
-    "HGLG11.SA": [153.00, 170.00],  # 📦 FII HGLG11
+    "GOLD11.SA": [23.74, 26.00],    # ✨ Ouro
+    "XPML11.SA": [105.49, 112.00],  # 🏢 FII XPML11
+    "HGLG11.SA": [153.00, 160.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
     "XPLG11.SA": [100.50, 105.00],  # 🏭 FII XPLG11
     "BTML11.SA": [85.00, 102.00],   # 🏬 FII BTML11
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
     "GGBR4.SA": [16.00, 24.00],     # 🏦 Gerdau
-    "ITUB4.SA": [39.00, 50.00],     # 🏦 Itaú
-    "BBDC4.SA": [17.50, 21.00],     # 🏦 Bradesco
+    "ITUB4.SA": [41.00, 50.00],     # 🏦 Itaú
+    "BBDC4.SA": [17.50, 22.00],     # 🏦 Bradesco
     "TOTS3.SA": [30.00, 37.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 11.00],     # 🚜 Fiagro
     "RZAG11.SA": [8.80, 10.00],     # 🚜 Fiagro
