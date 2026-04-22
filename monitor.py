@@ -31,6 +31,8 @@ monitorar = {
     "RZAG11.SA": [8.80, 10.00],     # 🚜 Fiagro
     "FGAA11.SA": [8.80, 10.00],     # 🚜 Fiagro
     "VISC11.SA": [107.20, 115.00],  # 🛍️ FII Shopping
+    "IVVB11.SA": [374.20, 420.00],  # 🛍️ ETF 500 MAIORES EMPRESAS EUA
+    "LFTB11.SA": [120.70, 121.00],  # 🛍️ ETF BANCO BTG TESOOURO SELIC
     "MGLU3.SA": [8.00, 12.00]       # 🛒 Magalu
 }
 
