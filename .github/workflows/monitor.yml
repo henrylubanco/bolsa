@@ -2,39 +2,34 @@ name: Monitor de Ativos B3
 
 on:
   schedule:
-    # O horário UTC é 3h a mais que Brasília.
+    # Unificado: Roda a cada 10 min entre 08:00 e 18:00 (Brasília)
+    # 11:00 às 21:00 UTC. Isso cobre o check-in das 8h, o resumo das 11h e o monitoramento.
+    - cron: '*/10 11-21 * * 1-5'
     
-    # Check-in de Status: 08:05 (Brasília) / 11:05 (UTC)
-    - cron: '5 11 * * 1-5'
-    
-    # Monitoramento a cada 10 min: 09:00 às 18:00 (Brasília)
-    - cron: '*/10 12-21 * * 1-5'
-    
-    # Resumo das 11:05 (Brasília) / 14:05 (UTC)
-    - cron: '5 14 * * 1-5'
-    
-  workflow_dispatch: # Permite rodar manualmente pelo botão "Run workflow"
+  workflow_dispatch: # Botão manual
 
 jobs:
   check-prices:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout do Repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Atualizado de v3 para v4 (Node 24)
 
       - name: Configurar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Atualizado de v4 para v5 (Node 24)
         with:
           python-version: '3.10'
+          cache: 'pip'
 
       - name: Instalar Bibliotecas
         run: |
+          python -m pip install --upgrade pip
           pip install yfinance requests pytz
 
       - name: Executar Script de Monitoramento
         env:
-          # Estas variáveis devem estar nos "Secrets" do seu GitHub
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor.py
