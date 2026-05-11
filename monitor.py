@@ -28,12 +28,12 @@ monitorar = {
     "BBDC4.SA": [18.00, 22.00],     # 🏦 Bradesco
     "TOTS3.SA": [30.00, 37.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 10.00],     # 🚜 Fiagro
-    "RZAG11.SA": [9.80, 10.00],     # 🚜 Fiagro
-    "FGAA11.SA": [9.80, 10.00],     # 🚜 Fiagro
+    "RZAG11.SA": [9.00, 10.00],     # 🚜 Fiagro
+    "FGAA11.SA": [9.00, 10.00],     # 🚜 Fiagro
     "VISC11.SA": [107.20, 115.00],  # 🛍️ FII Shopping
     "IVVB11.SA": [374.20, 420.00],  # 🛍️ ETF 500 MAIORES EMPRESAS EUA
-    "LFTB11.SA": [120.70, 121.00],  # 🛍️ ETF BANCO BTG TESOOURO SELIC
-    "MGLU3.SA": [8.00, 12.00]       # 🛒 Magalu
+    "LFTB11.SA": [120.50, 122.00],  # 🛍️ ETF BANCO BTG TESOOURO SELIC
+    "MGLU3.SA": [7.00, 10.00]       # 🛒 Magalu
 }
 
 def enviar_mensagem(texto):
