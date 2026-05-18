@@ -21,11 +21,11 @@ monitorar = {
     "HGLG11.SA": [153.00, 160.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
     "XPLG11.SA": [99.00, 105.00],  # 🏭 FII XPLG11
-    "BBAS3.SA": [21.00, 27.00],   # 🏬 BB
+    "BBAS3.SA": [19,50, 23.00],   # 🏬 BB
     "WEGE3.SA": [40.00, 60.00],     # ⚙️ Weg
     "GGBR4.SA": [16.00, 24.00],     # 🏦 Gerdau
     "ITUB4.SA": [41.00, 50.00],     # 🏦 Itaú
-    "BBDC4.SA": [18.00, 22.00],     # 🏦 Bradesco
+    "BBDC4.SA": [17.00, 22.00],     # 🏦 Bradesco
     "TOTS3.SA": [30.00, 37.00],     # 💻 Totvs
     "VGIA11.SA": [8.00, 10.00],     # 🚜 Fiagro
     "RZAG11.SA": [9.00, 10.00],     # 🚜 Fiagro
