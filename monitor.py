@@ -17,7 +17,7 @@ monitorar = {
     "BGI=k": [320.00, 350.00],      # 🐂 Boi Gordo (Contrato Futuro) MAIO
     "USDBRL=X": [4.95, 5.40],       # 💵 Dólar Comercial
     "GOLD11.SA": [23.50, 26.00],    # ✨ Ouro
-    "XPML11.SA": [106.50, 112.00],  # 🏢 FII XPML11
+    "XPML11.SA": [106.00, 112.00],  # 🏢 FII XPML11
     "HGLG11.SA": [153.00, 160.00],  # 📦 FII HGLG11
     "KNCR11.SA": [100.00, 110.00],  # 📄 FII KNCR11
     "XPLG11.SA": [96.00, 105.00],  # 🏭 FII XPLG11
